@@ -1,13 +1,13 @@
 import React, {Component} from 'react'
 
-class ArticleList extends Component{
+class NotFound extends Component{
     render(){
         return(
             <div>
-                articleList
+                NotFound
             </div>
         )
     }
 }
 
-export default ArticleList
+export default NotFound

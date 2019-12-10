@@ -4,7 +4,7 @@ class Setting extends Component{
     render(){
         return(
             <div>
-                111
+                Setting
             </div>
         )
     }

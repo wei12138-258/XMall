@@ -4,7 +4,7 @@ class ArticleEdit extends Component{
     render(){
         return(
             <div>
-                111
+                articleEdit
             </div>
         )
     }
