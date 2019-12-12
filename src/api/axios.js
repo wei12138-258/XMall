@@ -6,6 +6,8 @@ const service = axios.create({
 
 
 service.interceptors.request.use(config=>{
+    console.log(config)
+    config.headers = Object.assign({})
     return config
 })
 

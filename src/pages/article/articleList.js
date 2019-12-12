@@ -1,11 +1,12 @@
 import React, {Component} from 'react'
 import { Card,Button ,Table, Divider, Tag} from 'antd'
+import {getArtcleList} from "../../api/api"
 
 
 
 const columns = [
     {
-        title: 'Name',
+        title: 'ID',
         dataIndex: 'name',
         key: 'name',
         render: text => <a>{text}</a>,
@@ -89,6 +90,9 @@ class ArticleList extends Component{
                 <Table columns={columns} dataSource={data} />
             </div>
         )
+    }
+    componentDidMount(){
+        getArtcleList()
     }
 }
 

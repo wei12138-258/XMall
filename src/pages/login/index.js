@@ -14,7 +14,7 @@ class Login extends Component{
                 </div>
                 <div className="container">
                     {/* 头部 */}
-                    <div className="header">
+                    <div className="header"  style={{textAlign:"center"}}>
                         <h1>
                             XMALL
                             <span className="title">后台管理系统</span>
