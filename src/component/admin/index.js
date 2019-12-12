@@ -1,8 +1,8 @@
 import React, {Component} from 'react'
 import { Layout, Menu, Icon } from 'antd'
 import {withRouter} from "react-router-dom"
-import "../../assets/css/admin/admin.css"
-import {adminRoute} from "../../router/routes"
+import "@/assets/css/admin/admin.css"
+import {adminRoute} from "@/router/routes"
 const menus = adminRoute.filter(item=>item.isNav === true)
 
 const { Header, Content, Sider } = Layout;
@@ -12,7 +12,7 @@ class Admin extends Component{
       this.props.history.push(item.key)
     }
     render(){
-      // console.log(this.props)
+      console.log(this.props)
         return(
             <div className="admin"> 
                 <Layout>
