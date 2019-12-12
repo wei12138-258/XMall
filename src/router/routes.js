@@ -18,20 +18,23 @@ export const mainRoute = [{
 
 export const adminRoute = [{
     pathname: '/admin/dashboard',
-    component: DashBoard,
-    title: "统计报表"
+    component:  DashBoard,
+    title: "统计报表",
+    isNav: true
 },{
     pathname: '/admin/setting',
     component: Setting,
-    title: "系统管理"
+    title: "系统管理",
+    isNav: true
 },{
-    pathname: '/admin/articleEdit',
+    pathname: '/admin/articleEdit' ,
     component: ArticleEdit,
-    title: "商品列表"
+    isNav: false
 },{
     pathname: '/admin/articleList',
     component: ArticleList,
-    title: "订单列表"
+    title: "商品管理",
+    isNav: true
 },
 
 ]

@@ -1,0 +1,91 @@
+.vido{
+    position: absolute;
+    z-index: -1;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-image: none;
+}
+.bg{
+    margin: auto;
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    visibility: visible;
+    width: auto;
+    height: 991px;
+}
+.container{
+    width: 100%;
+    height: 100%;
+    padding: 0em;
+    background: rgba(0, 0, 0, 0.42);
+}
+.header{
+    padding-top: 2em;
+    text-align: center;
+}
+.header> h1{
+    font-size: 2.9em;
+    color: white;
+    letter-spacing: 4px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.header> h1>.title{
+    font-family: "黑体";
+}
+
+.sub-main-w3{
+    width: 26%;
+    margin: 0 auto;
+    position: relative;
+}
+.sub-title > h2{
+    font-size: 1.5em;
+    color: #fff;
+    letter-spacing: 1px;
+    margin-top: 0.3em;
+    margin-bottom: 2em;
+    font-weight: 400;
+    text-align: center;
+}
+#login{
+    width: 100%;
+}
+
+.user,.psw{
+    width: 25%;
+    font-size: 1em;
+    margin-left: 32em;
+    margin-bottom: 0.3em;
+    font-weight: 400;
+    font-family: 黑体;
+    letter-spacing: 1px;
+    outline: none;
+    padding: 1em 3em 1em 1em;
+    background: none;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(238, 238, 238);
+    background-color: rgb(232, 240, 254) !important;
+}
+span .icon1, .icon2{
+    top: 23%
+}
+.fa {
+    display: inline-block;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+  
+}

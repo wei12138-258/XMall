@@ -7,7 +7,11 @@ const { SubMenu } = Menu;
 const { Header, Content, Sider } = Layout;
 
 class Admin extends Component{
+    handleClick=(item)=>{
+      this.props.history.push(item.key)
+    }
     render(){
+      console.log(this.props)
         return(
             <div className="admin"> 
                 <Layout>
@@ -54,7 +58,7 @@ class Admin extends Component{
                           height: "auto",
                         }}
                       >
-                        Content
+                       {this.props.children}
                       </Content>
                     </Layout>
                   </Layout>
@@ -64,4 +68,4 @@ class Admin extends Component{
     }
 }
 
-export default Admin
+export default withRouter(Admin)
