@@ -21,15 +21,15 @@ const ArticleList = Loadable({
     loading: Loading
 })
 const NotFound = Loadable({
-    loader: ()=>import ("./notfound"),
+    loader: ()=>import ("./not-found"),
     loading: Loading
 })
 const Setting = Loadable({
     loader: ()=>import ("./setting"),
     loading: Loading
 })
-const DashBorad = Loadable({
-    loader: ()=>import ("./dashborad"),
+const DashBoard = Loadable({
+    loader: ()=>import ("./dashboard"),
     loading: Loading
 })
 
@@ -42,5 +42,5 @@ export {
     ArticleList,
     NotFound,
     Setting,
-    DashBorad
+    DashBoard
 }

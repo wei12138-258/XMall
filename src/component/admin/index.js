@@ -1,12 +1,18 @@
 import React, {Component} from 'react'
-import {adminRoutes} from "../../router"
+import {adminRoute} from "../../router/routes"
 import { Layout, Menu, Breadcrumb, Icon } from 'antd'
-
+import {withRouter} from "react-router-dom" 
+const menus = adminRoute.filter(item=>item.isNav === true)
+console.log(menus)
 const { SubMenu } = Menu;
 const { Header, Content, Sider } = Layout;
 
 class Admin extends Component{
+    handleClick=(item)=>{
+      this.props.history.push(item.key)
+    }
     render(){
+      console.log(this.props)
         return(
             <div className="admin"> 
                 <Layout>
@@ -40,10 +46,15 @@ class Admin extends Component{
                             </span>
                           }
                         >
-                          <Menu.Item key="1">option1</Menu.Item>
+                          {
+                            menus.map (item=>{
+                            return <Menu.Item onClick={this.handleClick} key={item.pathname}>{item.title}</Menu.Item>
+                            })
+                          }
+                          {/* <Menu.Item key="1">option1</Menu.Item>
                           <Menu.Item key="2">option2</Menu.Item>
                           <Menu.Item key="3">option3</Menu.Item>
-                          <Menu.Item key="4">option4</Menu.Item>
+                          <Menu.Item key="4">option4</Menu.Item> */}
                         </SubMenu>
                         <SubMenu
                           key="sub2"
@@ -89,7 +100,7 @@ class Admin extends Component{
                           minHeight: 280,
                         }}
                       >
-                        Content
+                       {this.props.children}
                       </Content>
                     </Layout>
                   </Layout>
@@ -99,4 +110,4 @@ class Admin extends Component{
     }
 }
 
-export default Admin
+export default withRouter(Admin)

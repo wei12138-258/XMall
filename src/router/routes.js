@@ -4,7 +4,7 @@ import {
     ArticleList,
     NotFound,
     Setting,
-    DashBorad
+    DashBoard
 } from "../pages"
 
 export const mainRoute = [{
@@ -18,16 +18,23 @@ export const mainRoute = [{
 
 export const adminRoute = [{
     pathname: '/admin/dashboard',
-    component: DashBorad
+    component:  DashBoard,
+    title: "仪表盘",
+    isNav: true
 },{
     pathname: '/admin/setting',
-    component: Setting
+    component: Setting,
+    title: "系统管理",
+    isNav: true
 },{
     pathname: '/admin/articleEdit' ,
-    component: ArticleEdit
+    component: ArticleEdit,
+    isNav: false
 },{
     pathname: '/admin/articleList',
-    component: ArticleList
+    component: ArticleList,
+    title: "商品管理",
+    isNav: true
 },
 
 ]
