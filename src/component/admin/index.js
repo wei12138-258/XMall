@@ -1,9 +1,10 @@
 import React, {Component} from 'react'
-import {adminRoute} from "../../router/routes"
 import { Layout, Menu, Icon } from 'antd'
+import {withRouter} from "react-router-dom"
 import "../../assets/css/admin/admin.css"
+import {adminRoute} from "../../router/routes"
+const menus = adminRoute.filter(item=>item.isNav === true)
 
-const { SubMenu } = Menu;
 const { Header, Content, Sider } = Layout;
 
 class Admin extends Component{
@@ -11,11 +12,11 @@ class Admin extends Component{
       this.props.history.push(item.key)
     }
     render(){
-      console.log(this.props)
+      // console.log(this.props)
         return(
             <div className="admin"> 
                 <Layout>
-                  <Header className="header" style={{background: "#2d6dcc", height: "44px", lineHeight: "44px"}}>
+                  <Header className="header" style={{background: "#2d6dcc", height: "44px", lineHeight: "44px", display: "flex"}}>
                     <div className="logo">XMall后台管理系统</div>
                     <Menu
                       theme="dark"
@@ -32,21 +33,14 @@ class Admin extends Component{
                     <Sider width={200} style={{ background: '#fff' }}>
                       <Menu
                         mode="inline"
-                        defaultSelectedKeys={['1']}
-                        defaultOpenKeys={['sub1']}
+                        defaultSelectedKeys={[this.props.location.pathname]}
                         style={{ height: '100%', borderRight: 0 }}
                       >
-                        <SubMenu
-                          key="sub1"
-                          title={
-                            <span>
-                              <Icon type="user" />
-                              统计报表
-                            </span>
-                          }
-                        >
-                          <Menu.Item>订单销量统计</Menu.Item>
-                        </SubMenu>
+                        {
+                          menus.map(item=>{
+                            return <Menu.Item onClick={this.handleClick} key={item.pathname}>{item.title}</Menu.Item>
+                          })
+                        }
                       </Menu>
                     </Sider>
                     <Layout style={{ padding: '0 24px 24px' }}>

@@ -13,7 +13,7 @@ class App extends Component{
                             return <Route key={item.pathname} path={item.pathname} render={(routerProps)=><item.component {... routerProps}/>}/>
                         })
                     }
-                    <Redirect to={adminRoute[0].pathname} from="admin" exact/>
+                    <Redirect to={adminRoute[0].pathname} from="/admin" exact/>
                 </Switch>
             </Admin>
         )

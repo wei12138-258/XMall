@@ -22,11 +22,6 @@ export const adminRoute = [{
     title: "统计报表",
     isNav: true
 },{
-    pathname: '/admin/setting',
-    component: Setting,
-    title: "系统管理",
-    isNav: true
-},{
     pathname: '/admin/articleEdit' ,
     component: ArticleEdit,
     isNav: false
@@ -35,6 +30,10 @@ export const adminRoute = [{
     component: ArticleList,
     title: "商品管理",
     isNav: true
-},
-
+},{
+  pathname: '/admin/setting',
+  component: Setting,
+  title: "系统管理",
+  isNav: true
+}
 ]
