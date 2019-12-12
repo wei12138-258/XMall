@@ -38,7 +38,7 @@ class Admin extends Component{
                       >
                         {
                           menus.map(item=>{
-                            return <Menu.Item onClick={this.handleClick} key={item.pathname}>{item.title}</Menu.Item>
+                            return <Menu.Item onClick={this.handleClick} key={item.pathname}> <Icon type={item.icon} /> {item.title}</Menu.Item>
                           })
                         }
                       </Menu>
